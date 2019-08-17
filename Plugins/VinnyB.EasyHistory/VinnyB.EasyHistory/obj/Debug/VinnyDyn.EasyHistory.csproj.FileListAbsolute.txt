@@ -1,0 +1,12 @@
+D:\Git\PowerApps\EasyHistory\Plugins\VinnyDyn.EasyHistory\VinnyDyn.EasyHistory\bin\Debug\VinnyDyn.EasyHistory.dll
+D:\Git\PowerApps\EasyHistory\Plugins\VinnyDyn.EasyHistory\VinnyDyn.EasyHistory\bin\Debug\VinnyDyn.EasyHistory.pdb
+D:\Git\PowerApps\EasyHistory\Plugins\VinnyDyn.EasyHistory\VinnyDyn.EasyHistory\bin\Debug\Microsoft.Crm.Sdk.Proxy.dll
+D:\Git\PowerApps\EasyHistory\Plugins\VinnyDyn.EasyHistory\VinnyDyn.EasyHistory\bin\Debug\Microsoft.Xrm.Sdk.dll
+D:\Git\PowerApps\EasyHistory\Plugins\VinnyDyn.EasyHistory\VinnyDyn.EasyHistory\bin\Debug\Microsoft.Xrm.Sdk.Workflow.dll
+D:\Git\PowerApps\EasyHistory\Plugins\VinnyDyn.EasyHistory\VinnyDyn.EasyHistory\bin\Debug\Microsoft.Crm.Sdk.Proxy.xml
+D:\Git\PowerApps\EasyHistory\Plugins\VinnyDyn.EasyHistory\VinnyDyn.EasyHistory\bin\Debug\Microsoft.Xrm.Sdk.xml
+D:\Git\PowerApps\EasyHistory\Plugins\VinnyDyn.EasyHistory\VinnyDyn.EasyHistory\bin\Debug\Microsoft.Xrm.Sdk.Workflow.xml
+D:\Git\PowerApps\EasyHistory\Plugins\VinnyDyn.EasyHistory\VinnyDyn.EasyHistory\obj\Debug\VinnyDyn.EasyHistory.csproj.CoreCompileInputs.cache
+D:\Git\PowerApps\EasyHistory\Plugins\VinnyDyn.EasyHistory\VinnyDyn.EasyHistory\obj\Debug\VinnyDyn.EasyHistory.csproj.CopyComplete
+D:\Git\PowerApps\EasyHistory\Plugins\VinnyDyn.EasyHistory\VinnyDyn.EasyHistory\obj\Debug\VinnyDyn.EasyHistory.dll
+D:\Git\PowerApps\EasyHistory\Plugins\VinnyDyn.EasyHistory\VinnyDyn.EasyHistory\obj\Debug\VinnyDyn.EasyHistory.pdb

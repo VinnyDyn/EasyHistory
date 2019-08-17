@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+  <control 
+    namespace="VinnyBComponents"
+    constructor="EasyHistory"
+    version="1.0.0"
+    display-name-key="EasyHistory for attributes"
+    description-key=""
+    control-type="standard"
+    preview-image="img/iconfinder_ic_history_48px_352426.png">
+
+      <type-group name="allAttributeTypes">
+        <type>Whole.None</type>
+        <type>TwoOptions</type>
+        <type>DateAndTime.DateOnly</type>
+        <type>DateAndTime.DateAndTime</type>
+        <type>Decimal</type>
+        <type>FP</type>
+        <type>Multiple</type>
+        <type>Currency</type>
+        <type>OptionSet</type>
+        <type>SingleLine.Email</type>
+        <type>SingleLine.Text</type>
+        <type>SingleLine.TextArea</type>
+        <type>SingleLine.URL</type>
+        <type>SingleLine.Ticker</type>
+        <type>SingleLine.Phone</type>
+      </type-group>
+      <property name="attribute" display-name-key="Attribute-Key" description-key="Description-Key" of-type-group="allAttributeTypes" usage="bound" required="true" />
+   
+    <resources>
+      <code path="index.ts" order="1"/>
+      <css path="css/EasyHistory.css" order="1" />
+      <img path="img/iconfinder_ic_history_48px_352426.png" />
+    </resources>
+
+    <!-- UNCOMMENT TO ENABLE THE SPECIFIED API
+    <feature-usage>
+      <uses-feature name="Device.captureAudio" required="true" />
+      <uses-feature name="Device.captureImage" required="true" />
+      <uses-feature name="Device.captureVideo" required="true" />
+      <uses-feature name="Device.getBarcodeValue" required="true" />
+      <uses-feature name="Device.getCurrentPosition" required="true" />
+      <uses-feature name="Device.pickFile" required="true" />
+      <uses-feature name="Utility" required="true" />
+      <uses-feature name="WebAPI" required="true" />
+    </feature-usage>
+    -->
+  </control>
+</manifest>

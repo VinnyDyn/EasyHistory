@@ -1,0 +1,2 @@
+D:\Git\PowerApps\EasyHistory\obj\Debug\EasyHistory.pcfprojAssemblyReference.cache
+D:\Git\PowerApps\EasyHistory\obj\Debug\EasyHistory.pcfproj.CoreCompileInputs.cache

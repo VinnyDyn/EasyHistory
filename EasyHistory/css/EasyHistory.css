@@ -1,0 +1,65 @@
+div.Container
+{
+    display: flex;
+    width: 100%;
+    margin: 1px;
+}
+
+div.Attribute
+{
+    width: 80%;
+}
+
+div.Button
+{
+    width: 20%;
+}
+
+div.HiddenHistory
+{
+    display: none;
+}
+
+div.VisibleHistory
+{
+    display: block;
+    position: absolute;
+    width: 80%;
+    background-color: whitesmoke;
+    border-style: dashed;
+    border-width: 1.5px;
+    border-color: gray;
+    border-radius: 3px;
+    z-index: 99;
+}
+
+button.Retrieve
+{
+    border-style: none;
+    width: 100%;
+    background-color: rgb(59, 121, 183);
+    color: white;
+    font-family: "Segoe UI Light";
+}
+
+div.HistoryRecord
+{
+    text-align: left;
+    margin: 0px;
+    margin-left: 10px;
+}
+
+p.HistoryValue
+{
+    font-size: 14px;    
+    font-weight: bold;
+    color: black;
+    font-family: "Segoe UI Light";
+}
+
+p.HistoryDetail
+{
+    font-size: 12px;
+    color: rgb(59, 121, 183);
+    font-family: "Segoe UI Light";
+}
