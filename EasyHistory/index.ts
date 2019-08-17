@@ -52,7 +52,16 @@ export class EasyHistory implements ComponentFramework.StandardControl<IInputs, 
 		//Core.Button.Input
 		this._historyButton = document.createElement("button");
 		this._historyButton.setAttribute("type", "button");
-		this._historyButton.setAttribute("class", "Retrieve");
+			if(Xrm.Page.ui.getFormType() != XrmEnum.FormType.Create)
+			{
+				this._historyButton.setAttribute("class", "Retrieve");
+				this._historyButton.disabled = false;
+			}
+			else
+			{
+				this._historyButton.setAttribute("class", "RetrieveDisabled");
+				this._historyButton.disabled = true;
+			}
 		this._historyButton.innerText = "Show history of " + this._attributeDisplayName;
 		this._historyButton.addEventListener("click", this.ShowHistory.bind(this));
 		this._container.append(this._historyButton);

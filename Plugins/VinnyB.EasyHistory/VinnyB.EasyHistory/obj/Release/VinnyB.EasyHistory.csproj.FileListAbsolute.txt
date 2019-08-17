@@ -31,7 +31,6 @@ D:\Git\PowerApps\EasyHistory\Plugins\VinnyB.EasyHistory\VinnyB.EasyHistory\bin\R
 D:\Git\PowerApps\EasyHistory\Plugins\VinnyB.EasyHistory\VinnyB.EasyHistory\bin\Release\Microsoft.Crm.Sdk.Proxy.xml
 D:\Git\PowerApps\EasyHistory\Plugins\VinnyB.EasyHistory\VinnyB.EasyHistory\bin\Release\Microsoft.Xrm.Sdk.xml
 D:\Git\PowerApps\EasyHistory\Plugins\VinnyB.EasyHistory\VinnyB.EasyHistory\bin\Release\Microsoft.Xrm.Sdk.Workflow.xml
-D:\Git\PowerApps\EasyHistory\Plugins\VinnyB.EasyHistory\VinnyB.EasyHistory\obj\Release\VinnyB.EasyHistory.csprojAssemblyReference.cache
 D:\Git\PowerApps\EasyHistory\Plugins\VinnyB.EasyHistory\VinnyB.EasyHistory\obj\Release\VinnyB.EasyHistory.csproj.CoreCompileInputs.cache
 D:\Git\PowerApps\EasyHistory\Plugins\VinnyB.EasyHistory\VinnyB.EasyHistory\obj\Release\VinnyB.EasyHistory.csproj.CopyComplete
 D:\Git\PowerApps\EasyHistory\Plugins\VinnyB.EasyHistory\VinnyB.EasyHistory\obj\Release\VinnyB.EasyHistory.dll

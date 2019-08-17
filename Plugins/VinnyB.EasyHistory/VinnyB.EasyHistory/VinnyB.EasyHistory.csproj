@@ -70,6 +70,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Business\DynamicsDAO.cs" />
     <Compile Include="Extensions\AttributeAuditDetailExtension.cs" />
     <Compile Include="Models\AuditDetailModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

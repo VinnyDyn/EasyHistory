@@ -10,11 +10,12 @@ namespace VinnyB.EasyHistory.Models
     [DataContract]
     public class AuditDetailModel
     {
-        public AuditDetailModel(string user, string modifiedOn, string value)
+        public AuditDetailModel(string user, string modifiedOn, string value, string type)
         {
             this.User = user;
             this.ModifiedOn = modifiedOn;
             this.Value = value;
+            this.Type = type.ToLower();
         }
 
         [DataMember]
@@ -23,5 +24,7 @@ namespace VinnyB.EasyHistory.Models
         public string ModifiedOn { get; set; }
         [DataMember]
         public string Value { get; set; }
+        [DataMember]
+        public string Type { get; set; }
     }
 }

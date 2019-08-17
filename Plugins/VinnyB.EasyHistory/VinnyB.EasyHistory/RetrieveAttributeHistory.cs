@@ -1,5 +1,6 @@
 using Microsoft.Crm.Sdk.Messages;
 using Microsoft.Xrm.Sdk;
+using Microsoft.Xrm.Sdk.Metadata;
 using Microsoft.Xrm.Sdk.Workflow;
 using System;
 using System.Activities;
@@ -7,6 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using VinnyB.EasyHistory.Business;
 using VinnyB.EasyHistory.Extensions;
 using VinnyB.EasyHistory.Models;
 
@@ -40,37 +42,23 @@ namespace VinnyB.EasyHistory
             Guid recordId = Guid.Empty;
             if (Guid.TryParse(EntityId.Get<string>(context), out recordId))
             {
-                //Make a request to retrieve the audit history
-                RetrieveAttributeChangeHistoryRequest request = new RetrieveAttributeChangeHistoryRequest()
+                DynamicsDAO dynamicsDAO = new DynamicsDAO(orgService);
+                List<AuditDetailModel> audits = dynamicsDAO.RetrieveAuditHistory(EntityLogicalName.Get<string>(context), AttributeLogicalName.Get<string>(context), recordId);
+                if (audits.Count > 0)
                 {
-                    Target = new EntityReference(EntityLogicalName.Get<string>(context), recordId),
-                    AttributeLogicalName = AttributeLogicalName.Get<string>(context)
-                };
-                //Execute the request
-                RetrieveAttributeChangeHistoryResponse response = (RetrieveAttributeChangeHistoryResponse)orgService.Execute(request);
-
-                //If the audit return histories
-                if (response.AuditDetailCollection != null && response.AuditDetailCollection.AuditDetails != null)
-                {
-                    //List do return
-                    List<AuditDetailModel> audits = new List<AuditDetailModel>();
-
-                    //Filter by changes
-                    foreach (AuditDetail auditDetail in response.AuditDetailCollection.AuditDetails.Where(w => w.GetType() == typeof(AttributeAuditDetail)))
+                    if (audits.Where(w => w.Type == "optionsetvalue").ToList().Count > 0) //This is necessary because the audit log, capture all changes in attributes including 'clear'
                     {
-                        AttributeAuditDetail attributeDetail = (AttributeAuditDetail)auditDetail;
-                        audits.Add(attributeDetail.ToEasyHistoryComponent());
+                        OptionMetadataCollection optionMetadatas = dynamicsDAO.GetOptionsSetTextOnValue(EntityLogicalName.Get<string>(context), AttributeLogicalName.Get<string>(context));
+                        audits.ReplaceOptionSetValuesByLabels(optionMetadatas);
                     }
-
-                    //Return values
-                    ChangesCount.Set(context, response.AuditDetailCollection.AuditDetails.Where(w => w.GetType() == typeof(AttributeAuditDetail)).Count());
-                    History.Set(context, audits.ToJSON());
+                    else if(audits.Where(w => w.Type == "boolean").ToList().Count > 0)
+                    {
+                        BooleanOptionSetMetadata booleanOptionSetMetadata = dynamicsDAO.GetBooleanTextOnValue(EntityLogicalName.Get<string>(context), AttributeLogicalName.Get<string>(context));
+                        audits.ReplaceBooleanValuesByLabels(booleanOptionSetMetadata);
+                    }
                 }
-                else
-                {
-                    //Error
-                    History.Set(context, $"{EntityId.Get<string>(context)} isn't a Guid");
-                }
+                ChangesCount.Set(context, audits.Count);
+                History.Set(context, audits.ToJSON());
             }
         }
     }

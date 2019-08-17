@@ -42,6 +42,15 @@ button.Retrieve
     font-family: "Segoe UI Light";
 }
 
+button.RetrieveDisabled
+{
+    border-style: none;
+    width: 100%;
+    background-color: whitesmoke;
+    color: black;
+    font-family: "Segoe UI Light";
+}
+
 div.HistoryRecord
 {
     text-align: left;
