@@ -21,3 +21,13 @@ It is compatible with these attribute types:
 - SingleLine.URL
 - SingleLine.Ticker
 - SingleLine.Phone
+
+### \node_modules\@types\xrm\index.d.ts\Xrm.ExecuteResponse
+Change the attribute body from 'string' to 'ReadableStream':
+```typescript
+ interface ExecuteResponse {
+        /**
+         * (Optional). Object.Response body.
+         */
+        body: ReadableStream;
+```
